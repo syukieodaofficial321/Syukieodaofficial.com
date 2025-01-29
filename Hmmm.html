@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syukie - Covers & Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Syukie</h1>
+        <nav>
+            <ul>
+                <li><a href="#covers">Covers</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="covers" class="container">
+        <h2>Covers</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_COVER_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="photos" class="container">
+        <h2>Photos</h2>
+        <a href="https://drive.google.com/drive/folders/1UmJuJlyAfyidq3EUr3USuEapDAgzVm3t" target="_blank">
+            <img src="https://drive.google.com/uc?export=view&id=YOUR_PHOTO_FILE_ID" alt="My Photos">
+        </a>
+    </section>
+
+    <section id="music" class="container">
+        <h2>Music</h2>
+        <a href="https://open.spotify.com/user/314pshj5x6wt76hk5kulsxzijvby" class="btn" target="_blank">Listen on Spotify</a>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:ayogsyukie@gmail.com">ayogsyukie@gmail.com</a></p>
+        <p>Email: <a href="mailto:ayogsyukie@hotmail.com">ayogsyukie@hotmail.com</a></p>
+        <p>Phone: <a href="tel:+639197130276">09197130276</a></p>
+        <a href="https://www.youtube.com/@odasofficial" class="btn" target="_blank">Subscribe on YouTube</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Syukie. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html><ALOASK-SEPARATE-EDITORS>/* Background: Acoustic guitar leaning against a wooden door */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: url('background.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* Header Styling */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Section Styling */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 100px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ff4500;
+}
+
+/* Image Styling */
+img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 3px solid #ff4500;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff4500;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: darkred;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+/* YouTube Embed */
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 10px;
+    margin-top: 10px;
+}<ALOASK-SEPARATE-EDITORS>document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("nav ul li a");
+
+    links.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetSection.offsetTop - 50,
+                behavior: "smooth"
+            });
+        });
+    });
+
+    // Add hover
